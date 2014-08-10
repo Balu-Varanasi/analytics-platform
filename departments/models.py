@@ -14,5 +14,5 @@ class Department(models.Model):
         verbose_name = _('Department')
         verbose_name_plural = _('Departments')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name + " " + self.code

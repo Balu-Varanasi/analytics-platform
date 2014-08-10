@@ -14,5 +14,5 @@ class College(models.Model):
         verbose_name = _('College')
         verbose_name_plural = _('Colleges')
 
-    def __unicode__(self):
+    def __str__(self):
         return self.name + " - " + self.code
