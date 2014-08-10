@@ -5,7 +5,7 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class College(models.Model):
-    name = models.CharField(_("Name of the College"),
+    name = models.CharField(_("College Name"),
                             max_length=120)
     code = models.CharField(_("College Code"),
                             max_length=10)
@@ -15,4 +15,4 @@ class College(models.Model):
         verbose_name_plural = _('Colleges')
 
     def __unicode__(self):
-        pass
+        return self.name + " - " + self.code
