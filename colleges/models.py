@@ -5,7 +5,6 @@ from django.utils.translation import ugettext_lazy as _
 
 
 class College(models.Model):
-
     """
     College:
         name: College Name
@@ -22,22 +21,3 @@ class College(models.Model):
 
     def __str__(self):
         return self.name + " - " + self.code
-
-
-class Branch(models.Model):
-
-    """
-    Branch/Department in a College:
-        college: foreign key to college
-        department: foreign key to department
-    """
-
-    college = models.ForeignKey("colleges.College")
-    department = models.ForeignKey("departments.Department")
-
-    class Meta:
-        verbose_name = _('Branch')
-        verbose_name_plural = _('Branches')
-
-    def __str__(self):
-        return self.department
